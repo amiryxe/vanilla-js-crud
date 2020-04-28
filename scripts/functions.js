@@ -83,7 +83,7 @@ const createProductDOM = (product) => {
   // card
   productEl.setAttribute(
     'class',
-    'bg-white rounded overflow-hidden shadow-lg w-full'
+    'bg-white rounded overflow-hidden shadow-lg w-full product-card'
   );
   productEl.setAttribute('style', 'margin-bottom: 1rem; padding: 2rem');
 
