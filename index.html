@@ -49,7 +49,6 @@
           <div class="flex items-center justify-between">
             <button
               class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
             >
               Add
             </button>
@@ -63,24 +62,24 @@
           </div>
         </form>
       </div>
+
+      <label>
+        <input type="checkbox" name="" id="existCheck" />
+        Just Exist Products
+      </label>
+
+      <br />
+      <br />
+
+      <input type="text" id="searchText" placeholder="Search Product..." />
+
+      <select name="" id="sort">
+        <option value="byEdited">By Edited</option>
+        <option value="byCreated">By Created</option>
+      </select>
+
+      <p>Title of exist Products:</p>
     </div>
-
-    <label>
-      <input type="checkbox" name="" id="existCheck" />
-      Just Exist Products
-    </label>
-
-    <br />
-    <br />
-
-    <input type="text" id="searchText" placeholder="Search Product..." />
-
-    <select name="" id="sort">
-      <option value="byEdited">By Edited</option>
-      <option value="byCreated">By Created</option>
-    </select>
-
-    <p>Title of exist Products:</p>
 
     <script src="./scripts/moment.min.js"></script>
     <script src="./scripts/jalali-moment.js"></script>

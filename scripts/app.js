@@ -7,7 +7,7 @@ const filters = {
 };
 
 const ul = document.createElement('ul');
-document.body.appendChild(ul);
+document.querySelector('.container').appendChild(ul);
 
 // Show Exist Products
 document.querySelector('#existCheck').addEventListener('change', (e) => {
