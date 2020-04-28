@@ -77,24 +77,42 @@
       <br />
       <br />
 
-      <input
-        type="text"
-        id="searchText"
-        placeholder="Search Product..."
-        class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-      />
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-first-name"
+          >
+            Search
+          </label>
+          <input
+            class="shadow py-2 px-3 w-full text-gray-700 border rounded mb-3 leading-tight focus:outline-none focus:bg-white"
+            type="text"
+            id="searchText"
+            placeholder="Search Product..."
+          />
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-last-name"
+          >
+            Sort
+          </label>
+          <select
+            name=""
+            id="sort"
+            class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="grid-state"
+          >
+            <option value="byEdited">By Edited</option>
+            <option value="byCreated">By Created</option>
+          </select>
+        </div>
+      </div>
 
-      <select
-        name=""
-        id="sort"
-        class="shadow border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="grid-state"
-      >
-        <option value="byEdited">By Edited</option>
-        <option value="byCreated">By Created</option>
-      </select>
-
-      <p>Title of exist Products:</p>
+      <h1>Title of exist Products:</h1>
+      <br />
     </div>
 
     <script src="./scripts/moment.min.js"></script>
