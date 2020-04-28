@@ -103,7 +103,7 @@ const createProductDOM = (product) => {
   productEl.appendChild(productItem);
 
   // price
-  priceText.textContent = product.price;
+  priceText.textContent = 'Price: ' + product.price;
   productEl.appendChild(priceText);
 
   // remove btn
