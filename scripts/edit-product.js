@@ -22,6 +22,8 @@ lastEditDate.textContent = lastUpdateDate(product.updated);
 
 document.querySelector('h1').textContent += `: ${product.title}`;
 
+document.title = 'Edit: ' + product.title;
+
 prdTitle.addEventListener('input', (e) => {
   product.title = e.target.value;
   product.updated = moment().valueOf();
