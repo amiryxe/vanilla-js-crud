@@ -78,6 +78,7 @@ const createProductDOM = (product) => {
   const checkbox = document.createElement('input');
   const productItem = document.createElement('a');
   const removeBtn = document.createElement('button');
+  const editBtn = document.createElement('button');
   const priceText = document.createElement('b');
 
   // card
@@ -105,6 +106,15 @@ const createProductDOM = (product) => {
   // price
   priceText.textContent = 'Price: ' + product.price;
   productEl.appendChild(priceText);
+
+  // Edit btn
+  editBtn.textContent = 'Edit';
+  editBtn.setAttribute('class', 'bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 ml-2 rounded-full');
+  editBtn.setAttribute('style', 'float: right');
+  editBtn.addEventListener('click', () => {
+    window.location.href = `./edit-product.html#${product.id}`;
+  });
+  productEl.appendChild(editBtn);
 
   // remove btn
   removeBtn.textContent = 'Remove';
