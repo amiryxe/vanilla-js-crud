@@ -54,9 +54,13 @@ const renderProducts = (products, filters) => {
     filteredPrd = filteredPrd.filter((item) => item.exist);
   }
 
-  filteredPrd.forEach((product) => {
-    ul.appendChild(createProductDOM(product));
-  });
+  if (filteredPrd.length > 0) {
+    filteredPrd.forEach((product) => {
+      ul.appendChild(createProductDOM(product));
+    });
+  } else {
+    ul.append('There is no any exist product!')
+  }
 
   saveProducts(products);
 };
