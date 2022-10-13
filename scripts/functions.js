@@ -138,5 +138,5 @@ const createProductDOM = (product) => {
 
 // Last Update Date
 const lastUpdateDate = (timestamp) => {
-  return `Last Update at ${moment(timestamp).locale('fa').fromNow()}`;
+  return `Last Update at ${moment(timestamp).fromNow()}`;
 };
