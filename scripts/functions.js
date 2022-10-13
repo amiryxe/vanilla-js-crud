@@ -108,7 +108,7 @@ const createProductDOM = (product) => {
   productEl.appendChild(productItem);
 
   // price
-  priceText.textContent = 'Price: ' + product.price;
+  priceText.textContent = 'Price: ' + (product.price == 0 ? 'Free' : product.price);
   productEl.appendChild(priceText);
 
   // Edit btn
