@@ -19,22 +19,27 @@ document.querySelector('#existCheck').addEventListener('change', (e) => {
 document.querySelector('#addProductForm').addEventListener('submit', (e) => {
   e.preventDefault();
   const timestamp = moment().valueOf();
-  if (!isNaN(e.target.elements.addProductPrice.value)) {
-    products.push({
-      id: uuidv4(),
-      title: e.target.elements.addProductTitle.value,
-      price: e.target.elements.addProductPrice.value,
-      exist: true,
-      created: timestamp,
-      updated: timestamp,
-    });
 
-    e.target.elements.addProductTitle.value = '';
-    e.target.elements.addProductPrice.value = '';
+  if (e.target.elements.addProductTitle.value && e.target.elements.addProductPrice.value) {
+    if (!isNaN(e.target.elements.addProductPrice.value)) {
+      products.push({
+        id: uuidv4(),
+        title: e.target.elements.addProductTitle.value,
+        price: e.target.elements.addProductPrice.value,
+        exist: true,
+        created: timestamp,
+        updated: timestamp,
+      });
 
-    renderProducts(products, filters);
+      e.target.elements.addProductTitle.value = '';
+      e.target.elements.addProductPrice.value = '';
+
+      renderProducts(products, filters);
+    } else {
+      alert('Please enter a valid price');
+    }
   } else {
-    alert('Please enter a valid price');
+    alert("Please enter title and price")
   }
 });
 
